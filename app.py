@@ -34,7 +34,7 @@ def callback():
     return'OK'
 
 
-@handler.add(MessageEvent, message=ImageMessage)
+@handler.add(MessageEvent, message=TextMessage)
 def handle_image_message(event):
     message_content = line_bot_api.get_message_content(event.message.id)
     # 取得した画像ファイル
