@@ -14,7 +14,7 @@ app = Flask(__name__)
 ACCESS_TOKEN = "ioc6LozyThAPnO7o5GFB0V+mlbsFQWCpiYhfI4Xf7Xn6ua58pU6AlBi8BDmiEA3I59s2Vaq5CqT1/Syw/yY+dqCNM0tSo7rdAEpCaekYnFiyv2fZQeJAYI+98fsA/PrvyWv3S/ZD6ybwSSB/yovEKwdB04t89/1O/w1cDnyilFU="
 SECRET = "3f4e1613cfa9fdc6d25337328dd866dd"
 
-FQDN = "https://izuminapp.herokuapp.com"
+FQDN = "https://grisly-mansion-12200.herokuapp.com"
 
 
 line_bot_api = LineBotApi(ACCESS_TOKEN)
