@@ -48,13 +48,14 @@ def handle_image_message(event):
         x = np.expand_dims(x, axis=0)
         x = x / 255.0
         # モデルのロード
-        model = load_model('dog_cat.h5')
+        #model = load_model('dog_cat.h5')
+        model = load_model('photos-model-light.hdf5')
         result_predict = model.predict(x)
 
         if result_predict < 0.5:
-            text = "This is cat"
+            text = "This is Asahi"
         if result_predict >= 0.5:
-            text = "This is dog"
+            text = "This is Sapporo"
 
         #line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url=FQDN+"/static/"+event.message.id+".jpg",preview_image_url=FQDN+"/static/"+event.message.id+".jpg"))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
